@@ -6,7 +6,7 @@
   become_user: root
 
 # talk to all hosts just so we can learn about them
-- hosts: all
+- hosts: nginx_uwsgi
   serial: 1
   tasks:
      - group_by: key=os_{{ ansible_distribution }}
